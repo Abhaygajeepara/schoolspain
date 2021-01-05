@@ -81,169 +81,119 @@ class _Module6State extends State<Module6> {
     // credittextToSpeech.stop();
     // investtextToSpeech.stop();
     // stocktextToSpeech.stop();
-    return Column(
+    return Stack(
       children: [
-        Container(
-          height: size.height * 0.115,
-          color: widget.color,
-          child: Column(
+
+        Align(
+          alignment: Alignment(0.0, -0.7),
+          child: Container(
+            width: size.width * 0.4,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
               children: [
-                Expanded(child: Padding(
-                  padding: const EdgeInsets.only(top:8.0),
-                  child: Image.asset(
-                      widget.icon
+                Text(
+                  'CREDITO',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontWeight: fontweight,
+                    fontSize: fontsize,
                   ),
-                )),
-                Divider(
-                  color: Colors.white,
-                  thickness: 2,
-                )
-              ]
+                ),
+                SizedBox(
+                  height: size.height * 0.02,
+                ),
+                GestureDetector(
+                  onTap: (){
+
+                    setState(() {
+                      playaudio(0);
+                    });
+                  },
+                  child: Image.asset(
+                    'asset/Module6/credit.png',
+                    height: size.height * .1,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+
+
+              ],
+            ),
           ),
         ),
-        Expanded(
-          child: Stack(
-            children: [
-              ImageButton(size,size.height*0.77),
-              ClipPath(
-                child: Stack(
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(
-                          image: new DecorationImage(
-                            fit: BoxFit.fill,
-                            // colorFilter:
-                            // ColorFilter.mode(Colors.purple.withOpacity(0.4),
-                            //     BlendMode.colorDodge),
-                            image: new AssetImage(
-                                widget.image
-                            ),
-                          )
-                      ),
-                    ),
-                    Container(
-                      color: widget.color.withOpacity(0.7),
-                    ),
-                    Container(
-                      color: Colors.white.withOpacity(0.3),
-                    )
-                  ],
-                ),
-                clipper: CustomRect(),
-              ),
-              Align(
-                alignment: Alignment(0.0, -0.7),
-                child: Container(
-                  width: size.width * 0.4,
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(
-                        'CREDITO',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: fontweight,
-                          fontSize: fontsize,
-                        ),
-                      ),
-                      SizedBox(
-                        height: size.height * 0.02,
-                      ),
-                      GestureDetector(
-                        onTap: (){
-
-                          setState(() {
-                            playaudio(0);
-                          });
-                        },
-                        child: Image.asset(
-                          'asset/Module6/credit.png',
-                          height: size.height * .1,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-
-
-                    ],
+        Align(
+          alignment: Alignment(0.0, -0.1),
+          child: Container(
+            width: size.width * 0.4,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  'INVERSIÓN',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontWeight: fontweight,
+                    fontSize: fontsize,
                   ),
                 ),
-              ),
-              Align(
-                alignment: Alignment(0.0, -0.1),
-                child: Container(
-                  width: size.width * 0.4,
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(
-                        'INVERSIÓN',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: fontweight,
-                          fontSize: fontsize,
-                        ),
-                      ),
-                      SizedBox(
-                        height: size.height * 0.02,
-                      ),
-                      GestureDetector(
-                        onTap: (){
+                SizedBox(
+                  height: size.height * 0.02,
+                ),
+                GestureDetector(
+                  onTap: (){
 
-                          setState(() {
-                            playaudio(1);
-                          });
-                        },
-                        child: Image.asset(
-                          'asset/Module6/invest.png',
-                          height: size.height * .1,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-
-
-                    ],
+                    setState(() {
+                      playaudio(1);
+                    });
+                  },
+                  child: Image.asset(
+                    'asset/Module6/invest.png',
+                    height: size.height * .1,
+                    fit: BoxFit.cover,
                   ),
                 ),
-              ),
-              Align(
-                alignment: Alignment(0.0, 0.5),
-                child: Container(
-                  width: size.width * 0.4,
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(
-                        'BOLSA DE VALORES',
-                        // textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: fontweight,
-                          fontSize: fontsize,
-                        ),
-                      ),
-                      SizedBox(
-                        height: size.height * 0.02,
-                      ),
-                      GestureDetector(
-                        onTap: (){
-
-                          setState(() {
-                            playaudio(2);
-                          });
-
-                        },
-                        child: Image.asset(
-                          'asset/Module6/stock.png',
-                          height: size.height * .1,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
 
 
-                    ],
+              ],
+            ),
+          ),
+        ),
+        Align(
+          alignment: Alignment(0.0, 0.5),
+          child: Container(
+            width: size.width * 0.4,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  'BOLSA DE VALORES',
+                  // textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontWeight: fontweight,
+                    fontSize: fontsize,
                   ),
                 ),
-              ),
-            ],
+                SizedBox(
+                  height: size.height * 0.02,
+                ),
+                GestureDetector(
+                  onTap: (){
+
+                    setState(() {
+                      playaudio(2);
+                    });
+
+                  },
+                  child: Image.asset(
+                    'asset/Module6/stock.png',
+                    height: size.height * .1,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+
+
+              ],
+            ),
           ),
         ),
       ],

@@ -79,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
         resizeToAvoidBottomPadding: false,
      // body: GameTemplate(color: Color(0xff224076),icon: "asset/Module1/pigcolorless.png",image: "asset/image/module1_background.png",name: "Cajero Automático",title: "CAJERO AUTOMÁTICO",data: "Muy bien has aprendido a manejar un cajero No dejes de practicar para el día que te toque usar uno",discription:"Los Cajeros Automáticos son máquinas dispensadoras de dinero activadas mediante una tarjeta y una clave secreta personal la cual identifica a un usuario.",gamemode: GamePage(color: Color(0xffF8CD35), icon: "asset/image/module7_atm.png",image: "asset/image/module7_background.png"),),
     //body:Module1(color: Color(0xff224076),icon: "asset/Module1/pigcolorless.png",image: "asset/image/module1_background.png")
-    //      body:Module6(color: Color(0xff224076),icon: "asset/Module6/module6icon.png",image: "asset/image/module4&6_background.png")
+      //body:Module6(color: Color(0xff224076),icon: "asset/Module6/module6icon.png",image: "asset/image/module4&6_background.png")
         body:Module4(color: Color(0xfff1861a),icon: "asset/Module4/heart.png",image: "asset/image/module4&6_background.png")
     );
 
